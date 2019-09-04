@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+<meta name="author" content="THOMAS COOK" />
+
+
+<title>CALPE GROUP</title>
+
+<script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/htmlwidgets-1.3/htmlwidgets.js"></script>
+<link href="site_libs/vis-4.16.1/vis.min.css" rel="stylesheet" />
+<script src="site_libs/vis-4.16.1/vis.min.js"></script>
+<link href="site_libs/timeline-0.4/timevis.css" rel="stylesheet" />
+<script src="site_libs/timevis-binding-0.4/timevis.js"></script>
+<link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+<script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="site_libs/leaflet-binding-2.0.2/leaflet.js"></script>
+<script src="site_libs/leaflet-providers-1.1.17/leaflet-providers.js"></script>
+<script src="site_libs/leaflet-providers-plugin-2.0.2/leaflet-providers-plugin.js"></script>
+<link href="site_libs/leaflet-easybutton-1.3.1/easy-button.css" rel="stylesheet" />
+<script src="site_libs/leaflet-easybutton-1.3.1/easy-button.js"></script>
+<script src="site_libs/leaflet-easybutton-1.3.1/EasyButton-binding.js"></script>
+<link href="site_libs/ionicons-2.0.1/ionicons.min.css" rel="stylesheet" />
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.5/datatables.js"></script>
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/dt-ext-buttons-1.10.16/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="site_libs/dt-ext-buttons-1.10.16/js/dataTables.buttons.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.flash.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.html5.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.colVis.min.js"></script>
+<script src="site_libs/dt-ext-buttons-1.10.16/js/buttons.print.min.js"></script>
+<link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+<link rel="stylesheet" href="FORMATO.css" type="text/css" />
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">CE Events</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Quotation</a>
+</li>
+<li>
+  <a href="contract.html">Contract</a>
+</li>
+<li>
+  <a href="about.html">Credentials</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">CALPE GROUP</h1>
+<h4 class="author"><em>THOMAS COOK</em></h4>
+<h4 class="date"><em>OCTOBER 10TH</em></h4>
+
+</div>
+
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" align="right"></A>') 
+    }); 
+</script>
+<div id="general-programme" class="section level2">
+<h2>General Programme</h2>
+<p> </p>
+<div id="programme-overview-and-timeline" class="section level3">
+<h3><strong>Programme Overview and timeline</strong></h3>
+<div id="htmlwidget-808e461245d159aab477" class="timevis html-widget" style="width:100%;height:300px;">
+<div class="btn-group zoom-menu">
+<button type="button" class="btn btn-default btn-lg zoom-in" title="Zoom in">+</button>
+<button type="button" class="btn btn-default btn-lg zoom-out" title="Zoom out">-</button>
+</div>
+</div>
+<script type="application/json" data-for="htmlwidget-808e461245d159aab477">{"x":{"items":[{"id":" 1","start":"2019-10-10 11:55:00","content":"Arrival at Alicante Airport","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":" 2","start":"2019-10-10 12:10:00","content":"Transfer Airport-Hotel","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":" 3","start":"2019-10-10 13:15:00","content":"Lunch at hotel","group":"2","type":"box","style":"background-color:#FF9933;"},{"id":" 4","start":"2019-10-10 14:30:00","content":"Transfer from the hotel","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":" 5","start":"2019-10-10 15:00:00","content":"12 people for a bike trip","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":" 6","start":"2019-10-10 15:00:00","content":"10 people for a hiking","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":" 7","start":"2019-10-10 20:30:00","content":"Dinner at hotel","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":" 8","start":"2019-10-11 08:30:00","content":"Bikers go for a bike trip","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":" 9","start":"2019-10-11 08:30:00","content":"Transfer to valencia (non bikers)","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"10","start":"2019-10-11 10:00:00","content":"Guided walking tour","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"11","start":"2019-10-11 12:00:00","content":"Paella lunch","group":"2","type":"box","style":"background-color:#FF9933;"},{"id":"12","start":"2019-10-11 14:00:00","content":"Bike tour at Turia River","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"13","start":"2019-10-11 17:00:00","content":"Transfer back to Calpe","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"14","start":"2019-10-11 20:00:00","content":"Bus at disposal for dinner","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"15","start":"2019-10-11 20:30:00","content":"Dinner at Bay Club Altea","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"16","start":"2019-10-12 10:00:00","content":"Bikers go for a bike trip","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"17","start":"2019-10-12 10:00:00","content":"Transfer from hotel to winery","group":"1","type":"box","style":"background-color:#FF9933;"},{"id":"18","start":"2019-10-12 12:30:00","content":"Lunch at the winery","group":"2","type":"box","style":"background-color:#FF9933;"},{"id":"19","start":"2019-10-12 16:30:00","content":"Transfer back to the hotel","group":"3","type":"box","style":"background-color:#FF9933;"},{"id":"20","start":"2019-10-12 20:30:00","content":"Dinner at BEAT restaurant","group":"4","type":"box","style":"background-color:#FF9933;"},{"id":"21","start":"2019-10-13 06:15:00","content":"Transfer to the airport","group":"1","type":"box","style":"background-color:#FF9933;"}],"groups":[{"id":"1","content":"Morning"},{"id":"2","content":"Lunch"},{"id":"3","content":"Afternoon"},{"id":"4","content":"Diner"}],"showZoom":true,"zoomFactor":0.2,"fit":true,"options":[],"height":300,"api":[{"method":"setOptions","options":{"orientation":"top","align":"left"}}]},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="map" class="section level3">
+<h3><strong>Map</strong></h3>
+<div id="htmlwidget-3a96e150efef75f473a1" style="width:768px;height:768px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3a96e150efef75f473a1">{"x":{"options":{"minZoom":9,"maxZoom":18,"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}},"dragging":true},"calls":[{"method":"addProviderTiles","args":["Esri",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addCircleMarkers","args":[[38.650818,39.469901,38.287613,38.629789,38.641,38.569682,38.7423856],[0.072604,-0.375951,-0.552975,-0.003886,0.0387,-0.113865,-0.0138675],5,null,null,{"interactive":true,"className":"","stroke":true,"color":["#FF0000","#FF0000","#FF0000","#0000FF","#0000FF","#0000FF","#0000FF"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FF0000","#FF0000","#FF0000","#0000FF","#0000FF","#0000FF","#0000FF"],"fillOpacity":0.2},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPopups","args":[[38.650818,39.469901,38.287613,38.629789,38.641,38.569682,38.7423856],[0.072604,-0.375951,-0.552975,-0.003886,0.0387,-0.113865,-0.0138675],["<b>Hotel AR<\/b>","<b>Valencia<\/b>","<b>Alicante Airport<\/b>","<b>Bay Club<\/b>","<b>Beat restaurant<\/b>","<b>Bodegas Mendoza<\/b>","<b>Bodegas Xaló<\/b>"],null,null,{"maxWidth":300,"minWidth":50,"autoPan":true,"keepInView":false,"closeButton":true,"className":""}]},{"method":"addLegend","args":[{"colors":["#FF0000","#0000FF"],"labels":["Accom","Rest"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"bottomright","type":"factor","title":null,"extra":null,"layerId":null,"className":"info legend","group":null}]},{"method":"addEasyButton","args":[{"icon":"ion-arrow-shrink","title":"Reset View","onClick":"function(btn, map){ map.setView(map._initialCenter, map._initialZoom); }","position":"topleft"}]}],"limits":{"lat":[38.287613,39.469901],"lng":[-0.552975,0.072604]}},"evals":["calls.4.args.0.onClick"],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (function(el, x){ var map = this; map._initialCenter = map.getCenter(); map._initialZoom = map.getZoom();}).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<p> </p>
+</div>
+</div>
+<div id="daily-programme" class="section level2 tabset tabset-fade tabset-pills">
+<h2>Daily programme</h2>
+<div id="day-1" class="section level3">
+<h3><strong>DAY 1</strong></h3>
+<p>By 11:50 flight will be arriving at Alicante Airport. A bus managed by Cutting Edge Events will be waiting for the gorup. An assistant will be waiting in order to escort the group to hotel. After setteling down on their rooms, guests will enjoy of a lunch in the hotel (managed by client). Once the group has finished a an activity will be organised for those non-bikers guests; <strong>Hiking</strong></p>
+<p>You’ll be absolutely surprised of the beauty of the close inland of this area if you come on this walking trip. This half day excursion will make you breath and smell the fresh and pure Spanish nature: dense pine forests, the blossoms of the fruit plantations and a variety of aromatic herbs. Add some sensational views to this and you’ve got an experience you’ll never forget!</p>
+<p> </p>
+<p><img src = "https://www.excursionesbenidorm.com/images/stories/senderismo/sierra%20helada1.jpg" width="720"></p>
+<p> </p>
+<p><img src = "https://www.excursionesbenidorm.com/images/stories/senderismo/routas-Guiadas/guadalest-reservoir3.jpg" width="720"></p>
+<p> </p>
+<p>After the activity, free time till dinner time. Dinner wil take place at the hotel and will be managed directly by client.</p>
+</div>
+<div id="day-2" class="section level3">
+<h3><strong>DAY 2</strong></h3>
+<p>While bikers will go for the bike trip the others guests will go for a full day tour in Valencia.</p>
+<p>The journey will start with a bus transfer to Valencia (1h 30 min way) followed by a walking tour thourgh Valencia’s downtown. Situated on the banks of the old course of the River Turia and originally settled by the Romans, the beautiful Mediterranean city of Valencia is well worth a visit. Your tour begins with a scenic coach trip through some of the city’s many lovely avenues and squares. A guided walking tour then follows that will take you through the city centre for a chance to view and photograph the Gothic architecture of the buildings. A visit to Valencia’s wonderful cathedral, the Our Lady of the Forsaken Basilica, is also included.The tour will be carried out by a english speaking guide. The tour will have one stop for Fartons and horchata tasting. Both horchata and fartons are a typical Valencian pastry and drink.</p>
+<p>Besides fartons and horchata, paella is also a typical food in Valencia. Guests will enjoy of a Paella lunch in restaurant <em>Puerta del Mar</em></p>
+<p> </p>
+<p><img src = "https://topvalencia.net/wp-content/uploads/2017/07/centro.jpg" width="720"></p>
+<p> </p>
+<p><img src = "https://www.buenosdiasmundo.com/wp-content/uploads/2018/05/ciudad-artes-ciencias-valencia-1500x844.jpg" width="720"></p>
+<p> </p>
+<p>Once they have finished, group will go for the second activity of the day; bike tour through Turia river. You’ll meet your guide at Valencia city centre, move on to the bike centre and then gear up with safety equipment and a bike. You’ll first ride down Passeig de la Petxina, then pass the Serranos Towers – the portal of Valencia’s old city walls – and on past Túria Gardens. The route continues on past Trinity Convent, the Fine Arts Museum as well as the Royal Gardens and Royal Bridge. Catch views of the concert hall after crossing De la Mar bridge en route to a truly amazing complex called the City of Arts &amp; Science.</p>
+<p><img src = "https://media-cdn.tripadvisor.com/media/photo-s/03/97/6c/d5/valenciabikes.jpg" width="720"></p>
+<p> </p>
+<p><img src = "https://static.lasprovincias.es/www/multimedia/201809/26/media/cortadas/puente-flores-k0hD-U601038282583EMG-624x385@Las%20Provincias.jpg" width="720"></p>
+<p> </p>
+<p>At night the group will enjoy of a dinner at <strong>Bay Club Marina</strong>. Located in an amazing spot, Bay Club Marina offers a mediterranean cuisine. Its products are bought in the local markets, giving to the restaurant a different atmosphere. The restaurant its about tapas menu combined with the best wines of the zone. Is not possible to feature a 3 main courses menu due to kitchen proportions. You’ll enjoy of a great dinner overlooking the sea and city lights of Altea. Open bar is available after the dinner with a DJ playing chill music.</p>
+<p> </p>
+<p><img src = "http://www.bayclubaltea.com/wp-content/uploads/2018/06/Image-17.jpg" width="720"></p>
+<p> </p>
+<p><img src = "http://www.bayclubaltea.com/wp-content/uploads/2018/06/Image-32.jpg" width="720"></p>
+<p> </p>
+</div>
+<div id="day-3" class="section level3">
+<h3><strong>DAY 3</strong></h3>
+<p>The structure of last day will be the same that the previous days. When the bikers will go fortheir trip, the rest of the group will go for a differnet activity; winery visit.</p>
+<p>Wine is an experience. But to taste all of its aspects we have designed a visit around a winery/museum in Jalon, so that those who are new into this world can discover all the pleasures in wine, and those who already know about it can discover the most technical aspects of it. The visit will take place at Bodegas Maserof. Maserof winery &amp; museum is an ancient Roman Villa, restored in 1972. Alqueria or Villa Romana, located 5.5 km from the town of Jalon-Alicante-Spain, the Museum Winery is located in a nucleus of houses, its origin dates back to a settlement of time of the Iberians, later converted into Villa Romana. During the activity guests will have a guided tour of the villa and the wine-museum. They will also taste some wines prepared in the villa, with grapes from the area. The lunch will be offered at the Villa, and made with products from the area and cooked in a wood-fired ovan.</p>
+<p><img src = "https://i1.wp.com/www.u3amoraira-teulada.org/wp-content/uploads/Maserof2.png?resize=721%2C405&ssl=1" width="720"></p>
+<p> </p>
+<p><img src = "https://scontent.fmad3-5.fna.fbcdn.net/v/t1.0-9/48415657_2253724541326932_2816669016192450560_n.jpg?_nc_cat=102&_nc_ht=scontent.fmad3-5.fna&oh=04026e90acf0bdc1a30cac95002afbcf&oe=5CE49A07" width="720"></p>
+<p> </p>
+<p>Last dinner will tkae place at <em>Beat</em> restaurant, located on Cookbook hotel. 1 km far from Diamante breach Beat is an experiment in gastronomic excellence, where the highest level of cuisine is prepared with only the best, most local and seasonal ingredients. Beat offers a journey around the Mediterranean sea, where the flavours, colors and aromas combine to create a magnetic sensory experience. Browse through our cellar, located right at the entrance, and choose from over 150 top Spanish and international wines. José Manuel Miguel was awarded with two Michelin stars (Restaurant in France) Walking distance: 15-20 minutes.</p>
+<p><em>Note</em> October 12th is bank holiday in Spain. We are waiting for</p>
+<p> </p>
+<p><img src = "https://media-cdn.tripadvisor.com/media/photo-s/0e/bd/b4/be/beat-restaurant.jpg" width="720"></p>
+<p> </p>
+<p><img src ="https://u.tfstatic.com/restaurant_photos/599/375599/169/612/beat-terraza-eba37.jpg" width="720"></p>
+<p> </p>
+<p>On the following day, early in the morning, a bus transfer to airport will be managed by Cutting Edge Events</p>
+<p>END OF THE PROGRAMME</p>
+<hr />
+</div>
+</div>
+<div id="budget" class="section level2">
+<h2>Budget</h2>
+<div id="htmlwidget-6a45933b6d93f7bf8c98" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6a45933b6d93f7bf8c98">{"x":{"filter":"none","extensions":["Buttons"],"data":[["2019-10-10","2019-10-10","2019-10-10","2019-10-10","2019-10-10","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-11","2019-10-12","2019-10-12","2019-10-12","2019-10-12","2019-10-12","2019-10-12","2019-10-12","2019-10-13",null],["Trnsf","Trnsf","Trnsf","Trnsf","Actv","Trnsf","Actv","Rest","Actv","Actv","Actv","Actv","Actv","Trnsf","Rest","Rest","Trnsf","Actv","Actv","Actv","Rest","Trnsf","Rest","Trnsf","TOTAL"],[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],[1,0,0,1,10,1,1,10,10,10,10,0,0,1,22,0,1,10,0,0,22,0,22,1,null],["Transfer Alicante Airport - Calpe hotel","Assistance at the airport","Taxi for the hostess (2)","Bus at disposal for Hiking activity. 4 hours","Mountain hiking activity. 1,5-2h","Bus at disposal for a full day in Valencia. 8 hours","English speaking guide","Fartons and Horchata tasting at “orxateria Santa Catalina”","Valencia Catedral tickets","Lunch in Valencia. Menu including paella (incl 2 glasses of wine/beer, water and coffee)","Bike rent","Mechanic per hour (optional)","Supplement to pick the bikes at the beach up.","Minibus transfer - 4 hours for dinner - Hotel-transfer-hotel","Dinner at Bay Club Marina. Including wine, water and coffee","Open Bar. Price to be confirmed by the restaurant","Bus at disposal for winery experience. 5 hours","Maserof winery and museum visit with wine tasting and lunch","Xaló winery visit. Including 4 wine tastes + snacks","Parcent winery visit. Including 4 wine  tasting + 4 tapas","Dinner at Beat hotel. 4 main courses. Drink package not included.","Optional: Minibus transfer - 4 hours for dinner - Hotel-transfer-hotel","Pairing wines","Transfer back to airport. Early in the morning.",null],[345,129,112.5,345,26,632,340,8.5,5,49,16,28,null,345,73.5,0,358.75,51.25,12.5,15,53.75,345,35,345,null],[345,0,0,345,260,632,340,85,50,490,160,0,0,345,1617,0,358.75,512.5,0,0,1182.5,0,770,345,7837.75]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>DATE<\/th>\n      <th>CAT<\/th>\n      <th>Owner<\/th>\n      <th>Quantity<\/th>\n      <th>Concept<\/th>\n      <th>withVAT<\/th>\n      <th>Total<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":false,"initComplete":"\n    function(settings, json) {\n      $(this.api().table().header()).css({\n        'background-color': '#ee7600 ',\n        'color': '#fff'\n      });\n    }","dom":"Bfrtip","buttons":["copy","print"],"pageLength":25,"autoWidth":true,"columnDefs":[{"className":"dt-right","targets":[3,5,6]}],"order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nDTWidget.formatDate(this, row, data, 0, 'toDateString');\nDTWidget.formatCurrency(this, row, data, 5, '€', 2, 3, ',', '.', true);\nDTWidget.formatCurrency(this, row, data, 6, '€', 2, 3, ',', '.', true);\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="terms-conditions" class="section level3">
+<h3>Terms &amp; Conditions</h3>
+<p>*Rates valid for 2019.</p>
+<p>*Net rates for Thomas cook</p>
+<p>*Cutting Edge Events management fee including in the detailed rates</p>
+<p>*VAT included.</p>
+<p>*No reservation has been done. Availability upon request.</p>
+<hr />
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

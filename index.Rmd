@@ -1,0 +1,252 @@
+---
+title: "CALPE GROUP"
+author: "THOMAS COOK"
+date: 'OCTOBER 10TH'
+output:
+  html_document:
+    css: FORMATO.css
+    fig_width: 8
+    fig_height: 8
+    highlight: textmate
+    theme: cosmo
+    toc: yes
+    toc_float: yes
+ 
+---
+
+<script> 
+    $(document).ready(function() { 
+    $head = $('#header'); 
+    $head.prepend('<A href = https://www.cuttingedge-events.com><img src ="LOGO.png" width="150" align="right"></A>') 
+    }); 
+</script> 
+
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(readxl)
+library(shiny)
+library(dplyr)
+library(knitr)
+```
+
+
+## General Programme
+
+&nbsp;
+
+### **Programme Overview and timeline**
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+library(timevis)
+library(dplyr)
+library(readxl)
+
+timeline <- read_excel("timeline.xlsx", 
+    sheet = "Sheet1", col_types = c("date", 
+        "text", "numeric", "numeric", "numeric", 
+        "text"))
+
+data <- data.frame( id = 1:length(timeline$start),
+                    start = as.POSIXlt(timeline$start),
+                    content = timeline$content,
+                    group = timeline$group,
+                    type = "box",
+                    style = "background-color:#FF9933;")
+
+groups = data.frame(id = 1:4, content = c("Morning", "Lunch", "Afternoon", "Diner"))
+
+tl <- timevis(data, groups, showZoom = TRUE, zoomFactor = 0.2, fit = TRUE, width = '100%', height = 300)
+
+tl %>% setOptions(list(orientation = "top", align = "left"))
+
+```
+
+### **Map**
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+
+library(leaflet)
+library(stringr)
+library(ggmap)
+library(readxl)
+library(dplyr)
+library(leaflet.extras)
+library(shiny)
+
+coordinates <- read_excel("timeline.xlsx", 
+    sheet = "Sheet3", col_types = c("text", 
+        "text", "numeric", "numeric", "text", 
+        "text"))
+
+coordinates$Category <- factor(coordinates$Category)
+
+m <- coordinates %>% 
+  leaflet(options = leafletOptions(dragging = TRUE,
+  minZoom = 9, maxZoom = 18)) %>% 
+  addProviderTiles("Esri") %>% 
+  setView(lng = -0.398071, lat = 38.915251, zoom = 9) 
+
+pal <- colorFactor(palette = c("red","blue"),
+      levels = coordinates$Category)
+
+m %>% clearBounds() %>% 
+  addCircleMarkers(radius = 5, color = ~pal(Category)) %>% 
+  addPopups(popup = paste0("<b>",coordinates$Location,"</b>")) %>% 
+  addLegend(position = "bottomright", pal = pal, 
+  values = coordinates$Category) %>% addResetMapButton()
+
+```
+
+&nbsp;
+
+## Daily programme{.tabset .tabset-fade .tabset-pills}
+
+### **DAY 1** 
+
+By 11:50 flight will be arriving at Alicante Airport. A bus managed by Cutting Edge Events will be waiting for the gorup. An assistant will be waiting in order to escort the group to hotel. 
+After setteling down on their rooms, guests will enjoy of a lunch in the hotel (managed by client). Once the group has finished a an activity will be organised for those non-bikers guests; **Hiking**
+
+You’ll be absolutely surprised of the beauty of the close inland of this area if you come on this walking trip.
+This half day excursion will make you breath and smell the fresh and pure Spanish nature: dense pine forests, the blossoms of the fruit plantations and a variety of aromatic herbs. Add some sensational views to this and you’ve got an experience you’ll never forget!
+
+&nbsp;
+
+<img src = "https://www.excursionesbenidorm.com/images/stories/senderismo/sierra%20helada1.jpg" width="720">
+
+&nbsp;
+
+<img src = "https://www.excursionesbenidorm.com/images/stories/senderismo/routas-Guiadas/guadalest-reservoir3.jpg" width="720">
+
+ &nbsp;
+ 
+ After the activity, free time till dinner time. Dinner wil take place at the hotel and will be managed directly by client.
+ 
+### **DAY 2**
+ 
+ While bikers will go for the bike trip the others guests will go for a full day tour in Valencia.
+ 
+The journey will start with a bus transfer to Valencia (1h 30 min way) followed by a walking tour thourgh Valencia's downtown. 
+Situated on the banks of the old course of the River Turia and originally settled by the Romans, the beautiful Mediterranean city of Valencia is well worth a visit. Your tour begins with a scenic coach trip through some of the city’s many lovely avenues and squares. A guided walking tour then follows that will take you through the city centre for a chance to view and photograph the Gothic architecture of the buildings. A visit to Valencia’s wonderful cathedral, the Our Lady of the Forsaken Basilica, is also included.The tour will be carried out by a english speaking guide. The tour will have one stop for Fartons and horchata tasting. Both horchata and fartons are a typical Valencian pastry and drink.
+ 
+ Besides fartons and horchata, paella is also a typical food in Valencia. Guests will enjoy of a Paella lunch in restaurant *Puerta del Mar*
+ 
+  &nbsp;
+ 
+ <img src = "https://topvalencia.net/wp-content/uploads/2017/07/centro.jpg" width="720">
+ 
+  &nbsp;
+ 
+ <img src = "https://www.buenosdiasmundo.com/wp-content/uploads/2018/05/ciudad-artes-ciencias-valencia-1500x844.jpg" width="720">
+ 
+ &nbsp;
+ 
+Once they have finished, group will go for the second activity of the day; bike tour through Turia river. 
+You’ll meet your guide at Valencia city centre, move on to the bike centre and then gear up with safety equipment and a bike. You’ll first ride down Passeig de la Petxina, then pass the Serranos Towers – the portal of Valencia’s old city walls – and on past Túria Gardens. The route continues on past Trinity Convent, the Fine Arts Museum as well as the Royal Gardens and Royal Bridge. Catch views of the concert hall after crossing De la Mar bridge en route to a truly amazing complex called the City of Arts & Science.
+
+<img src = "https://media-cdn.tripadvisor.com/media/photo-s/03/97/6c/d5/valenciabikes.jpg" width="720">
+
+&nbsp;
+
+<img src = "https://static.lasprovincias.es/www/multimedia/201809/26/media/cortadas/puente-flores-k0hD-U601038282583EMG-624x385@Las%20Provincias.jpg" width="720">
+
+&nbsp;
+
+At night the group will enjoy of a dinner at **Bay Club Marina**.
+Located in an amazing spot, Bay Club Marina offers a mediterranean cuisine. Its products are bought in the local markets, giving to the restaurant a different atmosphere. 
+The restaurant its about tapas menu combined with the best wines of the zone. Is not possible to feature a 3 main courses menu due to kitchen proportions.
+You’ll enjoy of a great dinner overlooking the sea and city lights of Altea.
+Open bar is available after the dinner with a DJ playing chill music.
+
+&nbsp;
+
+<img src = "http://www.bayclubaltea.com/wp-content/uploads/2018/06/Image-17.jpg" width="720">
+
+&nbsp;
+
+<img src = "http://www.bayclubaltea.com/wp-content/uploads/2018/06/Image-32.jpg" width="720">
+
+&nbsp;
+
+### **DAY 3**
+
+The structure of last day will be the same that the previous days. When the bikers will go fortheir trip, the rest of the group will go for a differnet activity; winery visit.
+
+Wine is an experience. But to taste all of its aspects we have designed a visit around a winery/museum in Jalon, so that those who are new into this world can discover all the pleasures in wine, and those who already know about it  can discover the most technical aspects of it.
+The visit will take place at Bodegas Maserof. Maserof winery & museum is an ancient Roman Villa, restored in 1972.
+Alqueria or Villa Romana, located 5.5 km from the town of Jalon-Alicante-Spain, the Museum Winery is located in a nucleus of houses, its origin dates back to a settlement of time of the Iberians, later converted into Villa Romana.
+During the activity guests will have a guided tour of the villa and the wine-museum. They will also taste some wines prepared in the villa, with grapes from the area. The lunch will be offered at the Villa, and made with products from the area and cooked in a wood-fired ovan.
+
+<img src = "https://i1.wp.com/www.u3amoraira-teulada.org/wp-content/uploads/Maserof2.png?resize=721%2C405&ssl=1" width="720">
+
+&nbsp;
+
+<img src = "https://scontent.fmad3-5.fna.fbcdn.net/v/t1.0-9/48415657_2253724541326932_2816669016192450560_n.jpg?_nc_cat=102&_nc_ht=scontent.fmad3-5.fna&oh=04026e90acf0bdc1a30cac95002afbcf&oe=5CE49A07" width="720">
+
+&nbsp;
+
+Last dinner will tkae place at *Beat* restaurant, located on Cookbook hotel. 1 km far from Diamante breach
+Beat is an experiment in gastronomic excellence, where the highest level of cuisine is prepared with only the best, most local and seasonal ingredients.  Beat offers a journey around the Mediterranean sea, where the flavours, colors and aromas combine to create a magnetic sensory experience. 
+Browse through our cellar, located right at the entrance, and choose from over 150 top Spanish and international wines.
+José Manuel Miguel was awarded with two Michelin stars (Restaurant in France)
+Walking distance: 15-20 minutes.
+
+*Note* October 12th is bank holiday in Spain. We are waiting for 
+
+&nbsp;
+
+<img src = "https://media-cdn.tripadvisor.com/media/photo-s/0e/bd/b4/be/beat-restaurant.jpg" width="720">
+
+&nbsp;
+
+<img src ="https://u.tfstatic.com/restaurant_photos/599/375599/169/612/beat-terraza-eba37.jpg" width="720">
+
+&nbsp;
+
+On the following day, early in the morning, a bus transfer to airport will be managed by Cutting Edge Events
+
+END OF THE PROGRAMME
+
+*****
+## Budget
+
+```{r echo=FALSE, message=FALSE,warning=FALSE}
+
+library(readxl)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+library(DT)
+
+budget <- read_excel("timeline.xlsx", sheet = "Sheet2", 
+    col_types = c("date", "text", "text", 
+        "numeric", "text", "numeric", "numeric"))
+budget$DATE <- as.Date(budget$DATE)
+
+DT::datatable(budget, extensions = "Buttons",rownames = FALSE, options = list(paging= FALSE,
+initComplete = JS("
+    function(settings, json) {
+      $(this.api().table().header()).css({
+        'background-color': '#ee7600 ',
+        'color': '#fff'
+      });
+    }"),
+dom ='Bfrtip', buttons = c('copy','print'),                           pageLength = nrow(budget),autoWidth = TRUE)) %>% 
+   formatDate('DATE') %>% 
+  formatCurrency(6:7,'\U20AC')
+
+
+```
+
+### Terms & Conditions
+
+  *Rates valid for 2019.
+  
+  *Net rates for Thomas cook
+  
+  *Cutting Edge Events management fee including in the detailed rates
+  
+  *VAT included. 
+  
+  *No reservation has been done. Availability upon request.
+  
+*****
